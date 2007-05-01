@@ -10,7 +10,7 @@ Url:		http://rubygame.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/rubygame/%{oname}-%{version}.tar.bz2
 BuildRequires:	ruby-rake
 BuildRequires:	SDL-devel
-BuildRequires:	SDL_gfx0-devel
+BuildRequires:	SDL_gfx-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
