@@ -9,6 +9,7 @@ Group:		Development/Ruby
 Url:		http://rubygame.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/rubygame/%{oname}-%{version}.tar.bz2
 BuildRequires:	ruby-rake
+BuildRequires:	ruby-devel
 BuildRequires:	ruby-RubyGems
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_gfx-devel
