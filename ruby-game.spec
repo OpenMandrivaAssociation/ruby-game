@@ -2,9 +2,9 @@
 
 Summary:	Rubygame is a cross-platform multimedia library for ruby
 Name:		ruby-game
-Version:	2.0.0
+Version:	2.1.0
 Release:	%mkrel 1
-License:	LGPL
+License:	LGPLv2+
 Group:		Development/Ruby
 Url:		http://rubygame.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/rubygame/%{oname}-%{version}.tar.bz2
