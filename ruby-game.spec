@@ -17,7 +17,6 @@ BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 Requires:	ruby
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Rubygame is a cross-platform game-development extension 
