@@ -1,6 +1,6 @@
 %define oname rubygame
 
-Summary:	Rubygame is a cross-platform multimedia library for ruby
+Summary:	Cross-platform multimedia library for ruby
 Name:		ruby-game
 Version:	2.1.0
 Release:	%mkrel 1
