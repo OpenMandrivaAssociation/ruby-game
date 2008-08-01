@@ -3,7 +3,7 @@
 Summary:	Cross-platform multimedia library for ruby
 Name:		ruby-game
 Version:	2.1.0
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	LGPLv2+
 Group:		Development/Ruby
 Url:		http://rubygame.sourceforge.net/
