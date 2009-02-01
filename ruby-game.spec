@@ -2,13 +2,13 @@
 
 Summary:	Cross-platform multimedia library for ruby
 Name:		ruby-game
-Version:	2.1.0
-Release:	%mkrel 6
+Version:	2.3.0
+Release:	%mkrel 1
 License:	LGPLv2+
 Group:		Development/Ruby
 Url:		http://rubygame.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/rubygame/%{oname}-%{version}.tar.bz2
-Patch0:		rubygame-2.1.0-linkage.patch
+Patch0:		rubygame-2.3.0-linkage.patch
 BuildRequires:	ruby-rake
 BuildRequires:	ruby-devel
 BuildRequires:	ruby-RubyGems
@@ -45,8 +45,7 @@ rake rdoc
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 mkdir -p %{buildroot}{%{ruby_sitearchdir},%{ruby_sitelibdir}}
 
-RUBYGAME_CONFIG="--sitearchdir %{buildroot}%{ruby_sitearchdir} --sitelibdir %{buildroot}%{ruby_sitelibdir}" rake install
-
+RUBYARCHDIR="%{buildroot}%{ruby_sitearchdir}" RUBYLIBDIR="%{buildroot}%{ruby_sitelibdir}" rake install
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
