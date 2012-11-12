@@ -1,0 +1,39 @@
+--- Rakefile.link	2009-02-01 19:08:32.000000000 +0100
++++ Rakefile	2009-02-01 19:11:16.000000000 +0100
+@@ -199,8 +199,8 @@
+          ].join(" ")
+ 
+ LINK_FLAGS = [from_env_or_config("LIBRUBYARG_SHARED"),
+-              from_env_or_config("LDFLAGS"),
+-              try_sdl_config("--libs")].join(" ")
++              from_env_or_config("LDFLAGS")].join(" ")
++LIBS = [try_sdl_config("--libs")].join(" ")
+ 
+ DEFAULT_EXTDIR = File.join('ext','rubygame','')
+ 
+@@ -217,7 +217,7 @@
+   end
+ 
+   def add_lib( lib )
+-    @lflags << @@libflag%lib
++    @libs << @@libflag%lib
+   end
+ 
+   def add_header( header )
+@@ -248,7 +248,7 @@
+     desc "Compile the #{@dynlib} extension"
+     file dynlib_full => objs_full do |task|
+ 
+-      link_command = "#{from_env_or_config('LDSHARED')} #{LINK_FLAGS} #{@lflags} -o #{dynlib_full} #{task.prerequisites.join(' ')}"
++      link_command = "#{from_env_or_config('LDSHARED')} #{LINK_FLAGS} #{@lflags} -o #{dynlib_full} #{task.prerequisites.join(' ')} #{@libs}"
+ 
+ 
+       # If link command includes i386 arch, and we're not allowing universal
+@@ -331,6 +331,7 @@
+ 
+ rubygame_core = ExtensionModule.new do |core|
+   core.dynlib = 'rubygame_core'
++  core.add_lib( 'SDL' )
+   core.objs = ['rubygame_main',
+                'rubygame_shared',
+                'rubygame_event',
