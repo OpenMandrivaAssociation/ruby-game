@@ -6,7 +6,7 @@ Version:	2.5.3
 Release:	%mkrel 2
 License:	LGPLv2+
 Group:		Development/Ruby
-Url:		http://rubygame.sourceforge.net/
+Url:		https://rubygame.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/rubygame/%{oname}-%{version}.tar.bz2
 Patch0:		rubygame-2.3.0-linkage.patch
 BuildRequires:	ruby-rake
